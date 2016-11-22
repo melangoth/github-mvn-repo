@@ -3,6 +3,8 @@
 ## Improvement hints
 
 * restrict artifacts to be overridden
+* fail build if git fails
+* verify artifact upload success
 * http://jeroenmols.com/blog/2016/02/05/wagongit/
 * extend usage documentation with more details
 
