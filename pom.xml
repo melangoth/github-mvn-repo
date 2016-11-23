@@ -11,8 +11,8 @@
     <pluginRepositories>
         <!--Setup own wagon plugin repository-->
         <pluginRepository>
-            <id>synergian-fork-repo</id>
-            <url>https://raw.github.com/melangoth/wagon-git/releases</url>
+            <id>github-mvn-repo</id>
+            <url>https://raw.github.com/melangoth/github-mvn-repo/releases</url>
         </pluginRepository>
     </pluginRepositories>
 
