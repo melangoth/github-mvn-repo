@@ -24,11 +24,11 @@
             <name>melangoth's github public maven repository</name>
             <url>git:releases://git@github.com:melangoth/github-mvn-repo.git</url>
         </repository>
-        <!--<snapshotRepository>
+        <snapshotRepository>
             <id>github-mvn-repo-snapshots</id>
             <name>melangoth's github public maven repository</name>
             <url>git:snapshots://git@github.com:melangoth/github-mvn-repo.git</url>
-        </snapshotRepository>-->
+        </snapshotRepository>
         <!--<site>
             <id>your-site-repo-id</id>
             <url>git:site://git@github.com:yourgithubusername/your-github-repo2.git</url>
