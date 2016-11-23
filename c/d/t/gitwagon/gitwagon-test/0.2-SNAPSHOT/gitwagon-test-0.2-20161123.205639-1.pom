@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>c.d.t.gitwagon</groupId>
+    <artifactId>gitwagon-test</artifactId>
+    <version>0.2-SNAPSHOT</version>
+
+    <pluginRepositories>
+        <!--Setup own wagon plugin repository-->
+        <pluginRepository>
+            <id>github-mvn-repo</id>
+            <url>https://raw.github.com/melangoth/github-mvn-repo/releases</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <!--Setup own maven repository-->
+        <!--https://github.com/melangoth/wagon-git.git-->
+        <repository>
+            <id>github-mvn-repo-releases</id>
+            <name>melangoth's github public maven repository</name>
+            <url>git:releases://git@github.com:melangoth/github-mvn-repo.git</url>
+        </repository>
+        <snapshotRepository>
+            <id>github-mvn-repo-snapshots</id>
+            <name>melangoth's github public maven repository</name>
+            <url>git:snapshots://git@github.com:melangoth/github-mvn-repo.git</url>
+        </snapshotRepository>
+        <!--<site>
+            <id>your-site-repo-id</id>
+            <url>git:site://git@github.com:yourgithubusername/your-github-repo2.git</url>
+        </site>-->
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>github-mvn-repo</id>
+            <name>melangoth's github public maven repository</name>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <!--
+               distributionManagement url was
+               <url>git:your-branch://git@github.com:yourgithubusername/your-github-repo.git</url>
+            -->
+            <url>https://raw.github.com/melangoth/github-mvn-repo/releases</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <extensions>
+            <!--Get the wagon plugin-->
+            <extension>
+                <groupId>ar.com.synergian</groupId>
+                <artifactId>wagon-git</artifactId>
+                <version>0.3.0</version>
+            </extension>
+        </extensions>
+    </build>
+</project>
